@@ -1,0 +1,13 @@
+.bannerInfo {
+	background-color: #9B9796;	
+}
+
+div {
+	height: 20cm;
+}
+
+.perfilImg {
+	height: 250px;
+	border-radius: 150px;
+	border: solid 3px white;
+}
