@@ -1,13 +1,42 @@
-.bannerInfo {
-	background-color: #9B9796;	
+body {
 }
-
-div {
-	height: 20cm;
+.bannerInfo {
+	background-color: #252527;	
+	border-radius: 40px 40px 40px 40px;
+	color: white;
 }
 
 .perfilImg {
-	height: 250px;
-	border-radius: 150px;
+	height: 240px;
+	border-radius: 50%;
 	border: solid 3px white;
+}
+
+.bannerDatos {
+	background-color: #ffffff;
+}
+
+.progress {
+	height: 14px !important;
+}
+
+.alinear {
+	display: flex;
+	align-items: center;
+}
+
+a:link, a:visited, a:active {
+	text-decoration:none;
+	color: white;
+}
+
+table {
+	width: 100%;
+	text-align: left;
+	margin-left: 20%;
+}
+
+.subtitulos {
+	font-size: 28px; 
+	font-style: normal;
 }
