@@ -31,9 +31,7 @@ a:link, a:visited, a:active {
 }
 
 table {
-	width: 100%;
 	text-align: left;
-	margin-left: 20%;
 }
 
 .subtitulos {
