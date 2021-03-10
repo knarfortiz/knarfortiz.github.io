@@ -1,5 +1,6 @@
 body {
 }
+
 .bannerInfo {
 	background-color: #252527;	
 	border-radius: 40px 40px 40px 40px;
@@ -26,7 +27,7 @@ body {
 }
 
 a:link, a:visited, a:active {
-	text-decoration:none;
+	text-decoration: none;
 	color: white;
 }
 
