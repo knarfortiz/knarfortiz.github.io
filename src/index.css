@@ -7,10 +7,15 @@ body {
 	color: white;
 }
 
+h4{
+	text-shadow: 10px 5px 5px black;
+}
+
 .perfilImg {
-	height: 240px;
-	border-radius: 50%;
+	width: 280px;
+	border-radius: 20px;
 	border: solid 3px white;
+	box-shadow: 10px 9px 15px black;
 }
 
 .bannerDatos {
