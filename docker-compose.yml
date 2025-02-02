@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  astro-app:
+    build: .
+    container_name: astro-container
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules  # Evita que el host sobrescriba node_modules
+    ports:
+      - "3000:3000"
+    command: ["pnpm", "run", "dev"]
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true

@@ -1,20 +1,24 @@
 # Usa la imagen oficial de Node.js como base
-FROM node:latest
+FROM node:latest as astro
+
+# Habilita pnpm
+RUN corepack enable && corepack prepare pnpm@latest --activate
 
 # Crea y establece el directorio de trabajo dentro del contenedor
 WORKDIR /usr/src/app
 
-# Copia el archivo package.json y package-lock.json de la carpeta 'app' al contenedor
-COPY app/package*.json ./
+# Copia solo los archivos de dependencias primero (mejora la caché de Docker)
+COPY package.json pnpm-lock.yaml ./
 
-# Instala las dependencias de Astro
-RUN npm install
+# Instala las dependencias sin modificar el lockfile
+RUN pnpm install --frozen-lockfile
 
-# Copia todo el contenido de la carpeta 'app' al contenedor
-COPY app/ .
+# Luego, copia todo el código de la aplicación
+COPY . .
 
-# Expone el puerto que utilizará la aplicación
+# Expone el puerto 3000
 EXPOSE 3000
 
 # Comando para iniciar la aplicación Astro
-CMD ["npm", "run", "dev"]
+CMD ["pnpm", "run", "dev"]
+
